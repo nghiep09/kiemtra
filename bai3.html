@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    let x= parseInt(prompt('Nhập 1 số vào :'))
+    function isFibonaci(a){
+        let i=1;
+        let j=1;
+        while (i<a){
+            i=i+j
+            j=i-j
+        }
+        if (i===a){
+            return true
+        }
+        else return false
+    }
+    console.log(isFibonaci(x))
+</script>

@@ -1,0 +1,28 @@
+<body>
+<h2>Draw a Circle:</h2>
+<canvas id="myCanvas" width="400" height="300" style="background-color: grey"></canvas>
+</body>
+</html>
+<script>
+    let $ = document.getElementById.bind(document)
+
+    class Circle {
+
+        constructor(x, y, radius) {
+            this.x = x;
+            this.y = y;
+            this.radius = radius;
+        }
+
+        render(draw, color) {
+            let ctx = $('myCanvas').getContext('2d');
+            ctx.beginPath();
+            ctx.fillStyle = color;
+            ctx.arc(draw.x, draw.y, draw.radius, 0, 2 * Math.PI);
+            ctx.stroke();
+        }
+    }
+
+    let circle = new Circle(10, 10, 100);
+    circle.render(circle, "#000000")
+</script>
